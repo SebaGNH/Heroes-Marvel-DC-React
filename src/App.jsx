@@ -1,11 +1,14 @@
 import React from 'react'
+import AppRouter from './router/AppRouter'
 
-const App = () => {
+const App = () => { //HeroesApp.jsx
   return (
     <div className="container">
       <div className="row">
 
-        <div>App</div>
+        <>
+          <AppRouter/>
+        </>
 
       </div>
     </div>
