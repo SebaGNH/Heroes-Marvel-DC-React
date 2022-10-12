@@ -4,7 +4,7 @@ import AppRouter from './router/AppRouter'
 const App = () => { //HeroesApp.jsx
   return (    
     <div className='container'>
-      <div className="row bg-secondary">
+      <div className="bg-secondary">
         <AppRouter/>
       </div>
     </div>

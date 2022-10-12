@@ -3,14 +3,12 @@ import {HeroList} from '../components'
 
 const DcPage = () => {
   return (
-    <>
-    
-    <h2>Dc Page</h2>
+    <>    
+      <h2>Dc Page</h2>
 
-    <HeroList 
-      publisher={'DC Comics'}
-    />
-    
+      <HeroList 
+        publisher={'DC Comics'}
+      />    
     </>
   )
 }
