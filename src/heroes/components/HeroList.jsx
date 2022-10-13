@@ -5,7 +5,7 @@ import {HeroCard} from './'
 const HeroList = ({publisher}) => {
   const listHero = getHeroesByPublisher(publisher);
   return (
-    <div className='row rows-col-1 row-cols-md-3 g-3'>
+    <div className='row rows-col-1 row-cols-md-2 row-cols-lg-3 g-3  px-3'>
       {
         listHero.map( hero => (            
           <HeroCard
@@ -14,7 +14,6 @@ const HeroList = ({publisher}) => {
           />
         ))
       }
-      
     </div>
   )
 }
