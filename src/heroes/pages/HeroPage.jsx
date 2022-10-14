@@ -1,12 +1,14 @@
-import React from 'react'
-import {useParams,Navigate, useNavigate} from 'react-router-dom'
-import {getHeroById} from '../helpers/getHeroById'
+import React, { useMemo } from 'react';
+import {useParams,Navigate, useNavigate} from 'react-router-dom';
+import {getHeroById} from '../helpers/getHeroById';
+import 'animate.css';
+
 
 const HeroPage = () => {
   //const heroImgUrl = `/assets/img/${hero.id}.jpg`;
   const {id} = useParams();
   
-  const hero = getHeroById(id);
+  const hero =  useMemo( () => getHeroById(id),[id]);
   //console.log(hero.superhero)
 
   //Imagen
@@ -32,11 +34,11 @@ const HeroPage = () => {
   return (
     <div className='row mt-1 p-4'>
       
-      <div className="col-md-4 ">
+      <div className="col-md-4">
         <img 
           src={img} 
           alt={hero.superhero}
-          className="card-img img-thumbnail  rounded-1"
+          className="card-img img-thumbnail rounded-1 animate__animated animate__flipInY"
           />      
       </div>
 

@@ -6,7 +6,7 @@ const HeroCard = ({hero}) => {
   return (
     <>
       <div className="col">
-        <div className="card bg-secondary border border-dark">
+        <div className="card bg-secondary border border-dark animatedFadeInfast">
 
           <div className="row no-gutters">
             
