@@ -1,7 +1,13 @@
+import {useContext} from 'react'
 import { Link, NavLink,useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth/context/AuthContext';
 
 
 const Navbar = () => {
+
+  const {user} = useContext(AuthContext);
+  //console.log(user)
+  //console.log('user '+user?.name)
 
   //Creamos una ruta de navegación que usaremos en el onLogout
   const navigate = useNavigate();
@@ -48,7 +54,7 @@ const Navbar = () => {
         <ul className="navbar-nav ml-auto">
           <span 
             className='nav-item nav-link text-dark'
-            >Canelo
+            >{user?.name}
           </span>
           <button 
             className="nav-item nav-link btn btn-outline-primary"
