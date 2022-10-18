@@ -5,7 +5,8 @@ import { AuthContext } from '../../auth/context/AuthContext';
 
 const Navbar = () => {
 
-  const {user} = useContext(AuthContext);
+  const {user, onLogoutProvider} = useContext(AuthContext);
+  //const {onLoginProvider} = useContext(AuthContext);
   //console.log(user)
   //console.log('user '+user?.name)
 
@@ -13,6 +14,8 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const onLogout = () => {
+    onLogoutProvider(); //Nos pide el name
+
     navigate("/login",{
       replace: true
     })
